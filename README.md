@@ -1,7 +1,7 @@
 # Chat Assistant for SQLite Database
 
-## 📌 Overview
-This **Chat Assistant** is a Flask-based API that converts natural language queries into SQL queries using Google's **Gemini AI** model. It then executes these queries on an SQLite database and returns structured results in a human-readable format.
+##  📌 **Overview**  
+This Chat Assistant is a Streamlit-based web application that converts natural language queries into SQL queries using Google's Gemini AI model. It then executes these queries on an SQLite database and returns the results in a clear, human-readable format for easy interpretation.
 
 
 ## 🚀 **Features**
