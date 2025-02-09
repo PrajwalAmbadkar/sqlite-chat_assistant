@@ -1,4 +1,6 @@
 pandas
-sqlite3
+sqlite3 # (built-in, if not then install )
 nltk
 streamlit 
+google-generativeai
+rapidfuzz
