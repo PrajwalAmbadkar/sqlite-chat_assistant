@@ -1,0 +1,166 @@
+Query: how many employees in sales department
+Response: ✅ The total count is **2**.
+--------------------------------------------------
+Query: give me department of grace
+Response: {query_results} is the Sales department.
+--------------------------------------------------
+Query: Who is the manager of the finance department?”
+Response: {query_results}
+--------------------------------------------------
+Query: how many employees in sales department
+Response: ✅ The total count is **2**.
+--------------------------------------------------
+Query: list all the employees details
+Response: 1. **Alice** works in **Sales**, earns **$50,000**, and was hired on **2021-01-15**.
+2. **Bob** works in **Engineering**, earns **$70,000**, and was hired on **2020-06-10**.
+3. **Charlie** works in **Marketing**, earns **$60,000**, and was hired on **2022-03-20**.
+4. **David** works in **HR**, earns **$55,000**, and was hired on **2019-09-25**.
+5. **Eve** works in **Finance**, earns **$75,000**, and was hired on **2018-11-30**.
+6. **Frank** works in **Engineering**, earns **$72,000**, and was hired on **2023-05-10**.
+7. **Grace** works in **Sales**, earns **$52,000**, and was hired on **2022-07-18**.
+--------------------------------------------------
+Query: Who is the manager of the finance department?”
+Response: The manager of the Marketing department is Eve.
+--------------------------------------------------
+Query: Who is the manager of the finance department?”
+Response: Eve is the manager.
+--------------------------------------------------
+Query: Who is the manager of the marketing department?”
+Response: Charlie is the manager of an unspecified department.
+--------------------------------------------------
+Query: give details  all the employees who is having salary less than 65 thousand
+Response: 1. Alice works in the Sales department and earns a salary of $50,000. She was hired on 2021-01-15.
+2. Charlie is employed in the Marketing department and has a salary of $60,000. He joined the company on 2022-03-20. 
+3. David earns $55,000 and works in the HR department. His hiring date is 2019-09-25.
+4. Grace, who was hired on 2022-07-18, is a member of the Sales department and earns $52,000 per year.
+--------------------------------------------------
+Query: how many employees in sales department
+Response: ✅ The total count is **2**.
+--------------------------------------------------
+Query: give me department of grace
+Response: The department with the information provided is Sales.
+--------------------------------------------------
+Query: employee with highest and lowest salary
+Response: * Eve earns the highest salary of 75,000.
+* Frank is close behind with a salary of 72,000.
+* Bob's salary is 70,000.
+* Charlie earns 60,000.
+* David's salary is 55,000.
+* Grace earns 52,000.
+* Alice, the lowest-paid employee among this group, earns 50,000.
+--------------------------------------------------
+Query: give details  of all the employees who is having salary less than 65 thousand
+Response: The salaries of the employees in the Finance department are as follows:
+
+- Alice earns a salary of 50,000.
+- Charlie's salary is 60,000.
+- David earns 55,000.
+- Grace earns a salary of 52,000.
+--------------------------------------------------
+Query: list all the employees details
+Response: Here's a list of the employees and their information:
+
+1. ID: 1, Name: Alice, Department: Sales, Salary: 50000, Hire_Date: 2021-01-15
+2. ID: 2, Name: Bob, Department: Engineering, Salary: 70000, Hire_Date: 2020-06-10
+3. ID: 3, Name: Charlie, Department: Marketing, Salary: 60000, Hire_Date: 2022-03-20
+4. ID: 4, Name: David, Department: HR, Salary: 55000, Hire_Date: 2019-09-25
+5. ID: 5, Name: Eve, Department: Finance, Salary: 75000, Hire_Date: 2018-11-30
+6. ID: 6, Name: Frank, Department: Engineering, Salary: 72000, Hire_Date: 2023-05-10
+7. ID: 7, Name: Grace, Department: Sales, Salary: 52000, Hire_Date: 2022-07-18
+--------------------------------------------------
+Query: list all the employees details
+Response: Sure, here is the response:
+
+There are 7 employees in the database. Their details are as follows:
+
+- ID: 1, Name: Alice, Department: Sales, Salary: 50000, Hire Date: 2021-01-15
+- ID: 2, Name: Bob, Department: Engineering, Salary: 70000, Hire Date: 2020-06-10
+- ID: 3, Name: Charlie, Department: Marketing, Salary: 60000, Hire Date: 2022-03-20
+- ID: 4, Name: David, Department: HR, Salary: 55000, Hire Date: 2019-09-25
+- ID: 5, Name: Eve, Department: Finance, Salary: 75000, Hire Date: 2018-11-30
+- ID: 6, Name: Frank, Department: Engineering, Salary: 72000, Hire Date: 2023-05-10
+- ID: 7, Name: Grace, Department: Sales, Salary: 52000, Hire Date: 2022-07-18
+--------------------------------------------------
+Query: give me department of grace
+Response: The Sales department is being queried.
+--------------------------------------------------
+Query: how many employees in sales department
+Response: ✅ The total count is **2**.
+--------------------------------------------------
+Query: give details  all the employees who is having salary less than 65 thousand
+Response: The company has 4 employees in the database. Here are their details:
+
+- Alice is an employee in the Sales department with an ID of 1. She earns a salary of 50000 and was hired on 2021-01-15.
+- Charlie, with an ID of 3, works in the Marketing department. He earns a salary of 60000 and joined the company on 2022-03-20.
+- David, who has an ID of 4, is part of the HR department and earns 55000. His hiring date is 2019-09-25.
+- Grace is an employee in the Sales department with an ID of 7. She earns a salary of 52000 and was hired on 2022-07-18.
+--------------------------------------------------
+Query: Who is the manager of the finance  department?”
+Response: Eve is the manager of the Sales department.
+--------------------------------------------------
+Query: give me department of grace
+Response: The query result indicates that the department in question is "Sales".
+--------------------------------------------------
+Query: list all the employees details
+Response: The manager of the Finance department is Eve.
+--------------------------------------------------
+Query: give details  all the employees who is having salary less than 65 thousand
+Response: The employees in the Sales department are: Alice and Grace.
+--------------------------------------------------
+Query: give details  of all the employees who is having salary less than 65 thousand
+Response: The employees in the Sales department are Alice and Grace.
+--------------------------------------------------
+Query: Who is the manager of the finance department?”
+Response: Eve's salary information is not provided in the given results.
+--------------------------------------------------
+Query: Who is the manager of the finance department?”
+Response: Eve is the manager of the Finance department.
+--------------------------------------------------
+Query: give details  of all the employees who is having salary less than 65 thousand
+Response: 1. Alice, working in the Sales department, earns a salary of 50,000 and has been employed since 2021-01-15.
+2. Charlie earns 60,000 as part of the Marketing team and started working on 2022-03-20.
+3. David, who joined the HR department on 2019-09-25, earns 55,000.
+4. Grace, who also works in Sales, earns 52,000 and joined the company on 2022-07-18.
+--------------------------------------------------
+Query: give me names of all employees working in engineering department
+Response: The employees in the Sales department are: Bob and Frank.
+--------------------------------------------------
+Query: give me names and salary of all employees working in hr department
+Response: David's salary is 55,000.
+--------------------------------------------------
+Query: who is the first person to join
+Response: The employee's name is Eve.
+--------------------------------------------------
+Query: give all he employees with their joining data 
+Response: **Response:**
+
+Alice, Bob, Charlie, David, Eve, Frank, and Grace are the employees currently working in the company. Here are some details about each employee:
+
+- Alice works in the Sales department, earns a salary of 50,000, and joined on January 15, 2021.
+- Bob is part of the Engineering department, earns 70,000, and has been with the company since June 10, 2020.
+- Charlie works in Marketing, earns 60,000, and joined on March 20, 2022.
+- David works in HR, earns 55,000, and joined on September 25, 2019.
+- Eve is part of the Finance department, earns 75,000, and has been with the company since November 30, 2018.
+- Frank also works in the Engineering department, earns 72,000, and joined on May 10, 2023.
+- Grace works in the Sales department, earns 52,000, and joined on July 18, 2022.
+--------------------------------------------------
+Query: give all the employees name with their joining data 
+Response: 1. Alice was hired on 2021-01-15.
+2. Bob was hired on 2020-06-10.
+3. Charlie was hired on 2022-03-20.
+4. David was hired on 2019-09-25.
+5. Eve was hired on 2018-11-30.
+6. Frank was hired on 2023-05-10.
+7. Grace was hired on 2022-07-18.
+--------------------------------------------------
+Query: give all the employees name with their joining data in ascending order
+Response: The company has hired a total of 7 employees since 2018.
+
+- Eve was hired on 2018-11-30.
+- David was hired on 2019-09-25.
+- Bob was hired on 2020-06-10.
+- Alice was hired on 2021-01-15.
+- Charlie was hired on 2022-03-20.
+- Grace was hired on 2022-07-18.
+- Frank was hired on 2023-05-10.
+--------------------------------------------------
