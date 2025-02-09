@@ -1,8 +1,16 @@
 # Chat Assistant for SQLite Database
 
 ##  📌 **Overview**  
-This Chat Assistant is a Streamlit-based web application that converts natural language queries into SQL queries using Google's Gemini AI model. It then executes these queries on an SQLite database and returns the results in a clear, human-readable format for easy interpretation.
+This Chat Assistant is a Streamlit-based application that converts natural language queries into SQL queries using Google's Gemini AI model. It then executes these queries on an SQLite database and returns the results in a clear, human-readable format for easy interpretation.
 
+🚀 **Deployed Using Streamlit**  
+The app is deployed using Streamlit, providing an interactive and easy-to-use interface for users to communicate with the database in natural language.
+
+### **Steps of Deployment**:
+1. **Prepare the Application**: Set up the necessary files including the Streamlit app, database connection, and AI model configuration.
+2. **Deploy to Streamlit**: Upload the project to Streamlit Cloud using the [Streamlit for Teams](https://streamlit.io/teams) platform.
+3. **Start the Application**: Once deployed, the app is accessible via a public link, allowing users to interact with the database through a conversational interface.
+4. **Real-time Interaction**: Users can start querying the database in natural language, with the assistant handling everything from SQL generation to response formatting.
 
 ## 🚀 **Features**
 - **Natural Language to SQL**: Effortlessly converts user input into optimized SQL queries.
