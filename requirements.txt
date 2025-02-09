@@ -1,5 +1,5 @@
 pandas
-sqlite3 # ( already built-in with python, if not then install )
 google-generativeai
 rapidfuzz
 flask
+streamlit
