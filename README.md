@@ -26,43 +26,11 @@ This **Chat Assistant** is a Flask-based API that converts natural language quer
 
 ## 🏃‍♂️ Steps to Run the Project Locally
 
-### 1️⃣ Install Dependencies
-Make sure you have Python installed (>= 3.8). Then, install the required packages:
-```sh
-pip install flask google-generativeai rapidfuzz
-```
+- Simply click the link below to start using the chat assistant.
 
-### 2️⃣ Set Up the SQLite Database
-Ensure the database file (`SQlite_database.db`) exists in the project directory. It should have the following tables:
-- **Employees** (ID, Name, Department, Salary, Hire_Date)
-- **Departments** (ID, Name, Manager)
+[Start Chat Assistant](https://app-chatassistant-hxudf2djuweh7oxrtvybun.streamlit.app/)
 
-### 3️⃣ Run the Flask Application
-```sh
-python app.py
-```
-This will start a local server at `http://127.0.0.1:5000/`
-
-### 4️⃣ Test the API
-You can test the `/chat-assistant` endpoint using **Postman** or **cURL**:
-
-#### Example Request:
-```json
-{
-    "query": "How many employees work in HR?"
-}
-```
-
-#### Example Response:
-```json
-{
-    "user_query": "How many employees work in HR?",
-    "sql_query": "SELECT COUNT(*) FROM Employees WHERE Department = 'HR';",
-    "response": {
-        "data": [[5]],
-        "columns": ["COUNT(*)"]
-    }
-}
+No additional setup is required—just type your question and get your answer instantly!
 ```
 
 ## ⚠️ Known Limitations & Future Improvements
