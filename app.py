@@ -2,11 +2,10 @@ import streamlit as st
 import google.generativeai as genai
 import sqlite3
 import re
-from rapidfuzz import process  # Fast fuzzy matching library
-import os
+from rapidfuzz import process  
 
 # Set your Gemini API key
-GEMINI_KEY = " " #Set your gemini key
+GEMINI_KEY = "AIzaSyAf8v93k5Be5uxRzSSIbwB3nFW5kE53XAM" 
 genai.configure(api_key=GEMINI_KEY)
 
 # Path to SQLite Database
