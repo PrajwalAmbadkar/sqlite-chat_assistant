@@ -35,7 +35,7 @@ This **Chat Assistant** is a Flask-based API that converts natural language quer
 [Start Chat Assistant](https://app-chatassistant-hxudf2djuweh7oxrtvybun.streamlit.app/)
 
 No additional setup is required—just type your question and get your answer instantly!
-```
+
 
 ## ⚠️ Known Limitations & Future Improvements
 ### Limitations:
