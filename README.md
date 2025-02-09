@@ -18,9 +18,10 @@ This project is an **AI-powered Chat Assistant** for querying an SQLite database
 ## 📂 Project Structure
 ```
 |-- SQLite-chat_assistant/
-    |-- app17.py           # Main script for processing queries
-    |-- Tecnique.db          # SQLite database file
     |-- README.md            # Project documentation
+    |-- Tecnique.db          # SQLite database file
+    |-- app17.py             # Main script for processing queries
+    |-- chat_log.txt         # Store previous chats
     |-- requirements.txt     # List of dependencies
 ```
 
