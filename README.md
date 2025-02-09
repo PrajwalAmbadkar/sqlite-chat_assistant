@@ -13,12 +13,12 @@ This project is an **AI-powered Chat Assistant** for querying an SQLite database
 - **Programming Language:** Python 🐍
 - **Database:** SQLite 🗄️
 - **Libraries:** Pandas, SQLite3, Natural Language Processing (NLP) techniques
-- **Interface:** Streamlit (optional for deployment)
+- **Interface:** Streamlit 
 
 ## 📂 Project Structure
 ```
 |-- SQLite-chat_assistant/
-    |-- app17..py           # Main script for processing queries
+    |-- app17.py           # Main script for processing queries
     |-- Tecnique.db          # SQLite database file
     |-- README.md            # Project documentation
     |-- requirements.txt     # List of dependencies
@@ -35,8 +35,8 @@ This project is an **AI-powered Chat Assistant** for querying an SQLite database
 ### 🔹 Running the Chatbot
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<PrajwalAmbadkar>/<sqlite-chat_assistant>.git
-   cd <sqlite-chat_assistant>
+   git clone https://github.com/PrajwalAmbadkar/sqlite-chat_assistant.git
+   cd sqlite-chat_assistant
    ```
 2. Run the chatbot:
    ```bash
