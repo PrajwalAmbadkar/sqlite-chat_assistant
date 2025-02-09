@@ -1,72 +1,82 @@
-# SQLite-chat_assistant
+# Chat Assistant for SQLite Database
 
-## 📌 Project Overview
-This project is an **AI-powered Chat Assistant** for querying an SQLite database using natural language. It converts user questions into SQL queries, fetches the relevant data, and returns human-readable responses.
+## 📌 Overview
+This **Chat Assistant** is a Flask-based API that converts natural language queries into SQL queries using Google's **Gemini AI** model. It then executes these queries on an SQLite database and returns structured results in a human-readable format.
 
 ## 🚀 Features
-- Converts natural language queries into SQL.
-- Retrieves data from an SQLite database.
-- Provides human-readable responses.
-- Handles invalid queries and errors gracefully.
+- Converts user input into **SQL queries**.
+- Retrieves **data** from an SQLite database.
+- Handles **error cases** (e.g., invalid queries, missing inputs).
+- Provides a **RESTful API** with a `/chat-assistant` endpoint.
 
-## 🛠️ Technologies Used
-- **Programming Language:** Python 🐍
-- **Database:** SQLite 🗄️
-- **Libraries:** Pandas, SQLite3, Natural Language Processing (NLP) techniques
-- **Interface:** Streamlit 
+## 🛠️ How It Works
+1. The user sends a **natural language query** to the API.
+2. The **Gemini AI model** translates the query into SQL.
+3. The **Flask app** executes the SQL on the SQLite database.
+4. The API **returns the results** in a structured JSON format.
 
 ## 📂 Project Structure
 ```
-|-- SQLite-chat_assistant/
-    |-- README.md            # Project documentation
-    |-- Tecnique.db          # SQLite database file
-    |-- app17.py             # Main script for processing queries
-    |-- chat_log.txt         # Store previous chats
-    |-- requirements.txt     # List of dependencies
+├── README.md                            # Project documentation
+├── SQlite_database.db                   # SQLite database file
+├── app.py                               # Main Flask application
+├── chat_assistent_sql_query_output      #File to store query and response
+├── requirements.txt                     # Required dependencies
 ```
 
-## 🛠️ Installation & Setup
-### 🔹 Prerequisites
-- Install **Python 3.8+**
-- Install required libraries using:
-  ```bash
-  pip install -r requirements.txt
-  ```
+## 🏃‍♂️ Steps to Run the Project Locally
 
-### 🔹 Running the Chatbot
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/PrajwalAmbadkar/sqlite-chat_assistant.git
-   cd sqlite-chat_assistant
-   ```
-2. Run the chatbot:
-   ```bash
-   python app17.py
-   ```
-3. Start chatting by entering your queries in natural language.
+### 1️⃣ Install Dependencies
+Make sure you have Python installed (>= 3.8). Then, install the required packages:
+```sh
+pip install flask google-generativeai rapidfuzz
+```
 
-## 🖥️ Example Queries
-| User Query | Generated SQL | Response |
-|------------|--------------|----------|
-| "Who is the manager of Finance?" | `SELECT Manager FROM Departments WHERE Name = 'Finance';` | "Eve is the manager of Finance." |
-| "List employees with a salary less than 65,000" | `SELECT Name FROM Employees WHERE Salary < 65000;` | "The employees with a salary below 65,000 are Alice and Grace." |
+### 2️⃣ Set Up the SQLite Database
+Ensure the database file (`SQlite_database.db`) exists in the project directory. It should have the following tables:
+- **Employees** (ID, Name, Department, Salary, Hire_Date)
+- **Departments** (ID, Name, Manager)
 
-## ⚠️ Error Handling
-- If a query is ambiguous, the chatbot asks for clarification.
-- Returns a friendly message if no data is found.
-- Handles invalid department names or incorrect input formats.
+### 3️⃣ Run the Flask Application
+```sh
+python app.py
+```
+This will start a local server at `http://127.0.0.1:5000/`
 
-## 📌 Future Improvements
-- Implementing a more advanced NLP model for query understanding.
-- Enhancing the UI with a web-based frontend.
-- Adding more database functionalities (e.g., inserting or updating records).
+### 4️⃣ Test the API
+You can test the `/chat-assistant` endpoint using **Postman** or **cURL**:
 
-## 📜 License
-This project is **open-source** under the MIT License.
+#### Example Request:
+```json
+{
+    "query": "How many employees work in HR?"
+}
+```
 
-## 🤝 Contributing
-Feel free to **fork** this repository and submit pull requests for improvements!
+#### Example Response:
+```json
+{
+    "user_query": "How many employees work in HR?",
+    "sql_query": "SELECT COUNT(*) FROM Employees WHERE Department = 'HR';",
+    "response": {
+        "data": [[5]],
+        "columns": ["COUNT(*)"]
+    }
+}
+```
 
-## 📧 Contact
-For any queries, reach out via GitHub Issues or email **prajwalambadkar12345@gmail.com**.
+## ⚠️ Known Limitations & Future Improvements
+### Limitations:
+- Relies on **Google Gemini AI**, requiring an API key.
+- May **misinterpret queries** or generate incorrect SQL.
+- Currently supports **only SQLite databases**.
+
+### Future Enhancements:
+- **Improve SQL validation** to prevent incorrect queries.
+- **Enhance error handling** for better user experience.
+- **Expand database support** to include PostgreSQL and MySQL.
+- **Add authentication** for secure API access.
+
+---
+💡 **Contributions & Suggestions are Welcome!** 🚀
 
