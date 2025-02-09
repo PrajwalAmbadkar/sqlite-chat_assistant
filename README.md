@@ -3,25 +3,15 @@
 ## 📌 Overview
 This **Chat Assistant** is a Flask-based API that converts natural language queries into SQL queries using Google's **Gemini AI** model. It then executes these queries on an SQLite database and returns structured results in a human-readable format.
 
-## 🚀 Features
-- Converts user input into **SQL queries**.
-- Retrieves **data** from an SQLite database.
-- Handles **error cases** (e.g., invalid queries, missing inputs).
-- Provides a **RESTful API** with a `/chat-assistant` endpoint.
 
-## 🛠️ How It Works
-1. The user sends a **natural language query** to the API.
-2. The **Gemini AI model** translates the query into SQL.
-3. The **Flask app** executes the SQL on the SQLite database.
-4. The API **returns the results** in a structured JSON format.
-
-🚀 **Features**
+## 🚀 **Features**
 - **Natural Language to SQL**: Effortlessly converts user input into optimized SQL queries.
 - **SQLite Database Integration**: Retrieves accurate data from an SQLite database based on the generated query.
 - **Error Handling**: Gracefully manages invalid queries, missing inputs, and data inconsistencies.
 - **Interactive Chat Interface**: Provides a smooth, conversational experience for users to interact with the database.
 
-🛠️ **How It Works**
+
+## 🛠️ **How It Works**
 1. **User Query**: The user submits a natural language query through the input field.
 2. **Query Translation**: The Gemini AI model processes the input and generates a corresponding SQL query.
 3. **Database Interaction**: The generated SQL query is executed against the SQLite database to retrieve relevant data.
