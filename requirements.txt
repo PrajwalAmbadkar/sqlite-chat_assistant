@@ -1,5 +1,4 @@
 pandas
 google-generativeai
 rapidfuzz
-flask
 streamlit
