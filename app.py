@@ -6,7 +6,7 @@ from rapidfuzz import process  # Fast fuzzy matching library
 import os
 
 # Set your Gemini API key
-GEMINI_KEY = "*************" #your gemini key
+GEMINI_KEY = "AIzaSyAf8v93k5Be5uxRzSSIbwB3nFW5kE53XAM"
 genai.configure(api_key=GEMINI_KEY)
 
 # Path to SQLite Database
@@ -117,52 +117,65 @@ def execute_sql_query(db_path, query):
         return f"Error: {str(e)}", []
 
 def generate_output_prompt(query_results, columns):
-    """
-    Generates a natural language response from SQL query results.
-    
-    - Ensures clear, human-friendly responses.
-    - Dynamically adapts based on query intent.
-    - Avoids technical jargon like "column" or "row".
-    """
-
-    # Handle cases where there are no results
+    # Handle empty results case
     if not query_results:
-        return "I'm sorry, but no employees have a salary below 65,000."
+        return "No matching records were found."
 
     # Constructing a detailed prompt
-    output_prompt = """You are an expert in SQL and databases. Your task is to analyze SQL query results and provide a **clear, human-readable response**. 
+    output_prompt = """You are an expert in SQL and databases. Your task is to convert SQL query results into a **clear, natural, and easy-to-understand response** for a non-technical user.  
 
-    ### **Guidelines for Understanding the Query Results:**
-    1. **Context Awareness:**  
-    - Understand what the query is asking (e.g., "Employees with salary < 65,000" → List of employees + their salaries).
-    - Identify key entities (e.g., "Employee Name," "Salary").
-    - Ensure the response aligns with the requested condition (salary < 65,000).
+    ### **Instructions for Formatting Responses:**  
+    1️ **Avoid technical jargon** like "column," "row," or "SQL result."  
+    2️ **Make the response conversational** and structured like an explanation.  
+    3️ **Handle singular and plural cases properly.**  
+    4 **For multiple results, list them clearly** in a structured format.
+    5 **carefully understand the 
+    --
+    ### **📌 Example Formats for Different Query Results:**  
 
-    2. **How to Structure Responses:**  
-    - **For a single employee:**  
-        ✅ *Example:* `"John has a salary of 60,000."`
-    - **For multiple employees:**  
-        ✅ *Example:* `"The employees earning below 65,000 are Alice (62,000), Bob (58,000), and Grace (59,500)."`
+    ✅ **1. For a Single Value (Direct Answer)**  
+    **SQL Result:** `Manager: Alice`  
+    **Response:** `"The manager of the Finance department is Alice."`  
 
-    ### **SQL Query Results:**
+    ✅ **2. For Multiple Values (Lists)**  
+    **SQL Result:** `Employee Name: Bob, Frank, Eve`  
+    **Response:** `"The employees working in the Engineering department are Bob, Frank, and Eve."`  
+
+    ✅ **4. For Numerical Data (Summaries & Aggregates)**  
+    **SQL Result:** `Average Salary: 75,000`  
+    **Response:** `"The average salary of employees in the Finance department is 75,000."`  
+
+    ✅ **5. For Multiple Attributes Per Entry (Detailed Lists)**  
+    **SQL Result:**  
+    - `Name: Bob, Salary: 60,000, Department: Sales`  
+    - `Name: Frank, Salary: 72,000, Department: Engineering`  
+
+    **Response:**  
+    *"Bob, who works in Sales, earns a salary of 60,000. Frank, who is part of the Engineering team, earns 72,000."*  
+
+    ✅ **6. For No Results Found**  
+    - **SQL Result:** *(No data found for a query)*  
+    - **Response:** `"No information is available for the requested query. Please check the department name or try again with a different request."`  
+    ---
+
+    ### ** Task: Generate a Human-Readable Response Based on the Given Query Results**  
+
+    Now, based on the SQL query results below, convert them into a natural language response.  
+
+    ### ** SQL Results:**  
+    {query_results}  
+
+    ### ** Response:**  
     """
-    
-    # Convert query results into readable format
-    result_data = []
+
+    # Formatting results
+    formatted_results = []
     for row in query_results:
-        row_data = ", ".join([f"{columns[i]}: {value}" for i, value in enumerate(row)])
-        result_data.append(row_data)
+        row_data = ", ".join([f"{columns[i]}: {row[i]}" for i in range(len(columns))])
+        formatted_results.append(row_data)
 
-    # Add formatted results to the prompt
-    output_prompt += "\n".join(result_data) + "\n\n"
-
-    # Final instruction for generating response
-    output_prompt += """Now, based on the above data, generate a well-structured response that:
-    - Clearly answers the original query.
-    - Lists employees with their salaries.
-    - Does not include unrelated information (like departments) unless explicitly requested.
-
-    ### **Response:**"""
+    output_prompt += "\n".join(formatted_results) + "\n\n"
+    output_prompt += "### Response:\n"
 
     return output_prompt
 
