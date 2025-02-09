@@ -10,7 +10,7 @@ GEMINI_KEY = "AIzaSyAf8v93k5Be5uxRzSSIbwB3nFW5kE53XAM"
 genai.configure(api_key=GEMINI_KEY)
 
 # Path to SQLite Database
-DB_PATH = "https://github.com/PrajwalAmbadkar/sqlite-chat_assistant/blob/main/SQlite_database.db"
+DB_PATH = "SQlite_database.db"
 
 # Log File Path
 LOG_FILE = "chat_assistent_sql_query_output"
