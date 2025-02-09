@@ -6,7 +6,7 @@ from rapidfuzz import process  # Fast fuzzy matching library
 import os
 
 # Set your Gemini API key
-GEMINI_KEY = "AIzaSyAf8v93k5Be5uxRzSSIbwB3nFW5kE53XAM"
+GEMINI_KEY = " " #Set your gemini key
 genai.configure(api_key=GEMINI_KEY)
 
 # Path to SQLite Database
