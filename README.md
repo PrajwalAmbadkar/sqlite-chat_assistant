@@ -35,7 +35,7 @@ The app is deployed using Streamlit, providing an interactive and easy-to-use in
 | ID          | INTEGER (Primary Key) | Unique identifier for each employee |
 | Name        | TEXT     | Employee's full name |
 | Department  | TEXT     | Department the employee belongs to |
-| Salary      | REAL     | Employee's salary |
+| Salary      | INTEGER     | Employee's salary |
 | Hire_Date   | TEXT     | Date of hiring (YYYY-MM-DD format) |
 
 ### 🏢 Departments Table  
