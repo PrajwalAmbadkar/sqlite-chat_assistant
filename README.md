@@ -27,7 +27,23 @@ The app is deployed using Streamlit, providing an interactive and easy-to-use in
 3. **Database Interaction**: The generated SQL query is executed against the SQLite database to retrieve relevant data.
 4. **Human-Readable Response**: The results are then formatted into a clear, easy-to-understand response and displayed to the user.
 
+## 📂 **Database Schema (SQLite)**  
 
+### 🛠 Employees Table  
+| Column Name  | Data Type | Description |
+|-------------|----------|-------------|
+| ID          | INTEGER (Primary Key) | Unique identifier for each employee |
+| Name        | TEXT     | Employee's full name |
+| Department  | TEXT     | Department the employee belongs to |
+| Salary      | REAL     | Employee's salary |
+| Hire_Date   | TEXT     | Date of hiring (YYYY-MM-DD format) |
+
+### 🏢 Departments Table  
+| Column Name  | Data Type | Description |
+|-------------|----------|-------------|
+| ID          | INTEGER (Primary Key) | Unique identifier for each department |
+| Name        | TEXT     | Name of the department |
+| Manager     | TEXT     | Name of the department manager |
 
 ## 📂 Project Structure
 ```
